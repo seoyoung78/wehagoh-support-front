@@ -1,0 +1,18 @@
+.MSC_020100_P01 {
+  &-title {
+    font-family: "NSKR";
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  &-grid {
+    //반드시 고정 크기를 사용하십시오
+    width: 890px;
+    height: 300px;
+  }
+  &-complete {
+    //고정크기를 권장합니다.
+    width: 300px;
+  }
+}

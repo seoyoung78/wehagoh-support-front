@@ -1,0 +1,367 @@
+@import "realgrid/dist/realgrid-style.css";
+
+//기본 DatePicker 공통 스타일 적용
+.MSC_010100 div.right_box,
+.MSC_020200 > .align_box > .align_split > .align_right > .sec_wrap > .sec_content > .search_list,
+.MSC_070100 > .align_box > .align_split > .align_left > .sec_wrap > .search_list,
+.MSC_080100 .search_list > .item > dd,
+.align_split > .align_left > .sec_wrap > .sec_content > .search_box,
+.dialog-data-schdule {
+  .WSC_LUXDatePicker > div:first-child > div {
+    width: 98px !important;
+    > div:first-child {
+      background-color: #fef4f4 !important;
+    }
+    > div:nth-child(2) {
+      margin-top: 0 !important;
+      left: 6px !important;
+      top: 5px !important;
+      font-size: 11px !important;
+      span {
+        margin: 0 0 !important;
+        font-size: 11px !important;
+      }
+    }
+  }
+}
+
+.dialog-data-schdule {
+  //LuxTimePicker 공통 스타일 적용
+  .WSC_LUXTimePicker {
+    width: 98px !important;
+    > div:first-child {
+      width: 98px !important;
+      > div:first-child {
+        background-color: #fef4f4 !important;
+      }
+      > div:nth-child(2) {
+        margin-top: 0 !important;
+        left: 6px !important;
+        top: 5px !important;
+        font-size: 11px !important;
+        span {
+          margin: 0 1 !important;
+          font-size: 11px !important;
+        }
+      }
+    }
+  }
+  //DateTimePicker 공통 스타일 적용
+  .WSC_LUXDateTimePicker {
+    height: 27px !important;
+    width: fit-content !important;
+    .WSC_LUXDatePicker {
+      width: fit-content !important;
+      margin-right: 10px;
+    }
+  }
+}
+
+[class*="MSC_"] > .align_box > .align_split .sec_footer > .option_box > button {
+  height: 32px !important;
+  font-size: 14px !important;
+}
+
+// LUXAlert, LUXConfirm 버튼 일괄 수정
+#dialog .WSC_LUXAlert .dialog_wrap > .dialog_btnbx > button,
+#dialog .WSC_LUXConfirm .dialog_wrap > .dialog_btnbx > button {
+  height: 37px !important;
+  font-size: 16px !important;
+  border-radius: 4px !important;
+}
+
+.gridwait > div.rg-root.rg-grid {
+  div {
+    cursor: wait !important;
+  }
+}
+
+/*UnactgUncmplDialog 스타일 커스텀 선언부, 아래를 기반으로 각 페이지에 맞게 수정 사용하세요.*/
+.unactguncmpldialog {
+  &-title {
+    font-family: "NSKR";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    &-label {
+      font-size: 14px;
+      font-weight: 900;
+      > span {
+        color: #1c90fb;
+      }
+    }
+  }
+  &-grid {
+    //반드시 고정 크기를 사용하십시오
+    width: 100%;
+    height: 300px;
+  }
+  &-complete {
+    //고정크기를 권장합니다.
+    width: 300px;
+  }
+}
+/*ReqPrscDialog 스타일 커스텀 선언부, 아래를 기반으로 각 페이지에 맞게 수정 사용하세요.*/
+.reqprscdialog {
+  &-title {
+    font-family: "NSKR";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    > span {
+      font-size: 14px;
+      font-weight: 900;
+    }
+  }
+  &-grid {
+    //반드시 고정 크기를 사용하십시오
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/*OpnnDialog*/
+.opnndialog {
+  text-align: left;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: 600px;
+    &-imgswrapper {
+      max-height: 400px;
+      overflow-y: scroll;
+      &-imgs {
+        width: 100%;
+        height: fit-content;
+        background-color: #f8f8f8;
+        box-sizing: border-box;
+        padding: 5px;
+        img {
+          box-sizing: border-box;
+          padding: 5px;
+          width: 100%;
+        }
+      }
+    }
+    .WSC_LUXTextArea {
+      flex-grow: 1;
+      div {
+        height: 100%;
+      }
+    }
+  }
+  &-bottom {
+    margin: 20px -31px -21px;
+    padding: 14px 0;
+    background: #f2f2f2;
+    text-align: center;
+  }
+}
+
+/*rsltvalu-col 결과값 컬럼 스타일*/
+.rsltvalu-col {
+  .rg-button-action {
+    background: url(../imgs/ic_note_m_over.png) no-repeat center;
+    &:hover,
+    &:active:hover,
+    &:hover:active {
+      background: url(../imgs/ic_note_m_over.png) no-repeat center;
+    }
+  }
+
+  /*하한치 표시 활성화*/
+  &-low {
+    color: #1c90fb;
+  }
+  /*상한치 표시 활성화*/
+  &-high {
+    color: #ff0000;
+  }
+
+  /*rsltvalu-col 장문만 있을 때 추가 스타일*/
+  &-txtonly {
+    .rg-renderer {
+      width: 0px;
+    }
+    .rg-cell-buttons {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.rg-empty-grid span {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 15px;
+  color: #8c8c8c;
+}
+
+.rg-left-column {
+  text-align: left !important;
+}
+
+.rg-emergency-pt {
+  background-color: #ffd7d7;
+}
+
+.rg-cancel-text {
+  text-decoration: line-through;
+  color: red;
+}
+
+.rg-cancel-bg {
+  background-color: #cccccc;
+}
+
+.rg-none-editable-bg {
+  background-color: #f4f4f4 !important;
+}
+
+// 이력관리 팝업
+.MSC_history {
+  .dialog_data_section {
+    .info_box {
+      display: block;
+      position: relative;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      .info_status {
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+        > dt {
+          display: block;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: -0.55px;
+          color: #ccc;
+          white-space: nowrap;
+        }
+        > dd {
+          display: block;
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: -0.6px;
+          color: #4a4a4a;
+          white-space: nowrap;
+        }
+        :last-child {
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .his_box {
+      display: flex;
+      gap: 10px;
+      .his_list {
+        .grid_box {
+          height: 600px;
+          width: 450px;
+        }
+      }
+      .his_content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .his_img + .his_txt {
+          height: 50%;
+          .txt_box {
+            max-height: 286px;
+          }
+        }
+        .his_txt {
+          height: 100%;
+          display: block;
+          box-sizing: border-box;
+          .txt_box {
+            width: 100%;
+            height: calc(100% - 17px);
+            max-height: 600px;
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #eaeaea;
+            font-size: 12px;
+            padding: 10px;
+            outline: none;
+            overflow: auto;
+            resize: none;
+            line-height: 16px;
+            text-align: left;
+            white-space: pre-wrap;
+            cursor: default;
+          }
+        }
+        .his_img {
+          height: 50%;
+          display: block;
+          box-sizing: border-box;
+          .img_box {
+            width: 100%;
+            height: calc(100% - 17px);
+            max-height: 286px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            border: 1px solid #eaeaea;
+            overflow: auto;
+            padding: 10px;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+        .contents_empty {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+
+          div {
+            text-align: center;
+
+            img {
+              width: 42px;
+              height: auto;
+            }
+
+            span {
+              display: block;
+              margin-top: 7px;
+              font-size: 12px;
+              color: #8c8c8c;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+div.editBox.editBox_fullWidth {
+  width: 100%;
+  flex-grow: 1;
+}
+.inbx_noPaddingLeft > div.inbx {
+  padding-left: 0px !important;
+}
+.inbx_fullWidth > div.inbx {
+  width: 100%;
+}
+@media print {
+  .auto_height {
+    height: auto !important;
+  }
+}

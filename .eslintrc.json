@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb/whitespace",
+    "prettier"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "babelrc": false,
+      "configFile": false,
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "vars-on-top": "off",
+    "no-underscore-dangle": "off", // var _foo;
+    "comma-dangle": "off",
+    "func-names": "off", // setTimeout(function () {}, 0);
+    "prefer-template": "off",
+    "no-nested-ternary": "off",
+    "max-classes-per-file": "off",
+    "consistent-return": "off",
+    "no-restricted-syntax": ["off", "ForOfStatement"], // disallow specified syntax(ex. WithStatement)
+    "require-await": "error",
+    "arrow-parens": ["error", "as-needed"], // a => {}
+    "no-param-reassign": ["error", { "props": false }],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true, // a || b
+        "allowShortCircuit": true, // a ? b : 0
+        "allowTaggedTemplates": true
+      }
+    ],
+    // push 할때 eslint 빼기 [start]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "@typescript-eslint/strict-boolean-expressions": "off", // truthy, falsy한 값을 엄격하게 체크 제외,
+    // push 할때 eslint 빼기 [end]
+    "import/no-extraneous-dependencies": ["off"],
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "spaced-comment": "off",
+    "import/newline-after-import": "off",
+    "import/prefer-default-export": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
+  }
+}

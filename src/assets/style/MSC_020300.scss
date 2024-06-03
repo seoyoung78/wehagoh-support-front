@@ -1,0 +1,13 @@
+.MSC_020300 {
+  .align_left {
+    width: 450px;
+  }
+
+  > .WSC_LUXFCircularProgress {
+    //override
+    > div:first-child {
+      background-color: #fff !important;
+      opacity: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.MSC_030200 {
+  min-height: 650px;
+  display: flex;
+
+  .align_left {
+    width: 450px;
+  }
+
+  .align_right {
+    .sec_wrap > .sec_content > .chart_box {
+      .image-container {
+        border: 1px solid #eaeaea;
+        .img_box {
+          display: flex;
+          justify-content: flex-end;
+          height: 30px;
+          background-color: rgb(242, 242, 242);
+        }
+
+        .img_btn_box {
+          margin-right: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .ic_attach_m_normal {
+            height: 20px;
+            object-fit: contain;
+            cursor: default;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .img_preview_container {
+          height: 275px;
+          overflow: auto;
+          .img_element {
+            margin: 5px;
+          }
+        }
+
+        .img_preview {
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+        .progress {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}

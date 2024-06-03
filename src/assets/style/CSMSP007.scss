@@ -1,0 +1,19 @@
+.CSMSP007 {
+  .print_box {
+    height: auto;
+    margin-bottom: 10mm;
+    display: block;
+    .record_comment {
+      white-space: pre-wrap;
+    }
+  }
+  .center_text {
+    text-align: center;
+  }
+  .table_gap {
+    height: 150px;
+  }
+  .high_table_gap {
+    height: 175px;
+  }
+}

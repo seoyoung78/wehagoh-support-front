@@ -1,0 +1,58 @@
+.MSC_090100 {
+  .left-column {
+    text-align: left !important;
+  }
+
+  .align_left {
+    width: 400px;
+  }
+
+  .align_right {
+    .textarea {
+      position: relative;
+      box-sizing: border-box;
+      textarea {
+        z-index: 9;
+        display: block;
+        box-sizing: border-box;
+        width: calc(100% - 16px);
+        height: 100%;
+        border-radius: 0;
+        padding: 6px 34px 1px 6px !important;
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        height: 27px !important;
+        color: rgb(124, 126, 128) !important;
+        resize: none;
+        &[disabled] {
+          background-color: rgb(243, 243, 243) !important;
+          cursor: not-allowed;
+        }
+        border: 1px solid rgb(219, 219, 219);
+        &.max_memo {
+          height: 110px !important;
+        }
+      }
+      textarea:focus {
+        outline-width: 0;
+      }
+      img {
+        position: absolute;
+        right: 16px;
+        top: 8px;
+        z-index: 10;
+      }
+    }
+
+    .sec_wrap {
+      &.full_size {
+        &.add_footer {
+          &.none {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}

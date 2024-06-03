@@ -1,0 +1,18 @@
+.MSC_020200 {
+  .align_right {
+    .tabs {
+      > .WSC_LUXTabs {
+        .WSC_LUXButton {
+          font-size: 13px !important;
+          height: 25px !important;
+          line-height: 0.93px !important;
+          span:not(:last-child) {
+            color: yellow !important;
+            top: 6px !important;
+            bottom: 6px !important;
+          }
+        }
+      }
+    }
+  }
+}

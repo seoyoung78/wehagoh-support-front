@@ -1,0 +1,246 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printArea,
+  #printArea * {
+    visibility: visible;
+  }
+  /* 아래 코드는 고정 높이값이 아닐 경우 적용됨 */
+  .print_box {
+    break-after: always; /* 각 페이지 후에 페이지 분할 */
+    overflow: visible;
+    display: block;
+    margin-bottom: 0;
+  }
+  .print_box:last-child {
+    break-after: avoid; /* 마지막 페이지에서는 페이지 분할 방지 */
+    display: block;
+  }
+}
+
+.print {
+  user-select: none;
+
+  #printArea {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &_box {
+    display: flex;
+    flex-direction: column;
+    height: 297mm;
+    background-color: transparent;
+    width: 210mm;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 4mm 7.5mm;
+    box-sizing: border-box;
+
+    .full_size {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      height: auto;
+      position: relative;
+    }
+    .full_size2 {
+      -webkit-box-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      height: auto;
+      position: relative;
+    }
+
+    .print_info {
+      font-size: 12px;
+      text-align: right;
+      line-height: 20px;
+      color: #707070;
+    }
+
+    .print_header {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid #000000;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 0 18px;
+
+      &_title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        > h1 {
+          font-size: 22px;
+        }
+        > p {
+          font-size: 14px;
+          color: #707070;
+        }
+      }
+      &_logo {
+        display: flex;
+        align-items: center;
+        height: 22px;
+        width: auto;
+        > img {
+          max-height: 100%;
+          width: auto;
+        }
+      }
+    }
+
+    .print_wrap {
+      margin-top: 10px;
+
+      .print_title {
+        h3 {
+          font-size: 12px;
+          font-weight: 900;
+          line-height: 25px;
+          white-space: nowrap;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        h2 {
+          font-size: 14px;
+          font-weight: 900;
+          line-height: 25px;
+          white-space: nowrap;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+      }
+
+      .print_title + .print_content {
+        height: calc(100% - 25px);
+        .text_box {
+          height: calc(100% - 25px);
+        }
+      }
+
+      .print_content {
+        height: 100%;
+
+        .text_box {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: block;
+          box-sizing: border-box;
+          border: 1px solid #eaeaea;
+          font-size: 12px;
+          padding: 10px;
+          outline: none;
+          overflow: hidden;
+          resize: none;
+          line-height: 16px;
+          text-align: left;
+          white-space: pre-wrap;
+          cursor: default;
+        }
+
+        .img_box {
+          max-width: 100%;
+          max-height: 100%;
+          box-sizing: border-box;
+          border: 1px solid #eaeaea;
+          display: flex;
+          justify-content: center;
+          img {
+            max-width: 100%;
+            height: 264px;
+            object-fit: contain;
+            text-align: center;
+          }
+        }
+
+        .explane_box {
+          font-size: 13px;
+          line-height: 18px;
+          white-space: pre-wrap;
+          .indent {
+            text-indent: 30px;
+          }
+        }
+
+        .treatment_box {
+          height: 520px;
+          white-space: pre-wrap;
+        }
+
+        table.h_limited_tbl > tbody > tr > td > div.inbx {
+          max-height: 700px;
+          overflow-y: hidden;
+          white-space: pre-line !important;
+        }
+      }
+
+      .print_sign {
+        display: flex;
+        justify-content: end;
+        font-size: 14px;
+        gap: 30px;
+        .sign_box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          height: 38px;
+          > img {
+            position: absolute;
+            right: 25px;
+            object-fit: contain;
+          }
+          :first-child {
+            font-weight: 900;
+            margin-right: 10px;
+          }
+          .sign_text {
+            margin-left: 38px;
+          }
+          .override_text_cell {
+            font-weight: normal;
+            margin-right: 0;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .print_paging {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+      }
+      .print_paging::before {
+        content: "(";
+      }
+      .print_paging::after {
+        content: ")";
+      }
+    }
+    .align_bottom {
+      margin-top: auto;
+    }
+  }
+
+  &_footer {
+    bottom: 0px;
+    width: 100%;
+    height: 62px;
+    position: fixed;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+}

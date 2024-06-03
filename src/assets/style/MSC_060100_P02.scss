@@ -1,0 +1,22 @@
+.MSC_060100_P02 .dialog_content .dialog_data .dialog_data_area {
+  height: 400px;
+  overflow: auto;
+
+  .type_records {
+    .medical_history {
+      li[class="open"] {
+        .list_subject .left_box .writer {
+          color: #1c90fb;
+        }
+      }
+    }
+    .record_comment {
+      padding: 10px 10px 8px;
+      white-space: pre-wrap;
+    }
+  }
+
+  .empty-container {
+    height: 100%;
+  }
+}

@@ -1,0 +1,84 @@
+.MSC_070100 {
+  .title {
+    margin-top: 0 !important;
+  }
+
+  .align_left {
+    width: 450px;
+
+    .sec_wrap {
+      > .search_list {
+        .item {
+          width: 100%;
+          dt {
+            width: 38px;
+          }
+          dd {
+            flex-grow: 1;
+          }
+        }
+        + .search_list {
+          margin-top: 4px;
+        }
+        .WSC_LUXSmartComplete {
+          width: 100%;
+          > div div span {
+            background-color: #fef4f4 !important;
+          }
+        }
+      }
+    }
+
+    & .card_container {
+      width: 100%;
+      flex-direction: column;
+      background-color: #fafafa;
+      .empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .msc_070100_t05 {
+    height: 100%;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    &-grid {
+      flex: 1 0 auto;
+      div.rg-fixed-column-bar {
+        background-color: #bcc0c8;
+      }
+    }
+    &-graph {
+      flex: 0 0 auto;
+      .title {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  //CardItem 스타일
+  .item-wrap {
+    height: 70px;
+    padding: 3px 12px;
+    .item-box {
+      width: 100%;
+      text-align: start;
+      background-color: white;
+      inset: 3px 12px;
+      border: 1px solid rgb(224, 224, 224);
+      border-radius: 3px;
+      box-sizing: border-box;
+      &.selected {
+        background-color: rgb(230, 245, 255);
+      }
+    }
+  }
+  .disabled {
+    cursor: no-drop;
+  }
+}

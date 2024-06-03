@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="https://static.wehago.com/imgs/common/favicons/favicon-32x32.png" />
+    <meta id="viewport" name="viewport" content="width=1280" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- OG -->
+    <meta
+      name="description"
+      content="위하고에서 자동화된 회계 처리부터 협업에 필요한 서비스까지 기업에 필요한 다양한 업무 환경을 만나보세요"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="기업이 필요한 다양한 서비스 - 위하고" />
+    <meta
+      property="og:description"
+      content="위하고에서 자동화된 회계 처리부터 협업에 필요한 서비스까지 기업에 필요한 다양한 업무 환경을 만나보세요"
+    />
+    <meta property="og:url" content="https://www.wehago.com" />
+    <meta property="og:image" content="https://static.wehago.com/imgs/common/wehago_og.png" />
+
+    <title>WEHAGO H 진료지원</title>
+
+    <!-- [D] 서드파티 헤더 관련 CSS는 확인을 위해 붙였습니다.-->
+    <link rel="stylesheet" href="https://static.wehago.com/baseComponents/wehago.global.live.css" />
+
+    <link rel="stylesheet" href="/clinicsupport/static/css/2.clinicsupport.chunk.css" />
+    <link rel="stylesheet" href="/clinicsupport/static/css/main.clinicsupport.chunk.css" />
+
+    <!--
+        * 172.16.114.131 는 마크업 개발기 주소 입니다.
+        * dev.wehagoh.com에서는 172로 시작하는 마크업 개발기 주소를 바라보게 해주시고,
+            운영기에서는 주석처리된 Static 주소를 바라보게 분기처리 하시면 됩니다.
+        * 관련 설정은 WEHAGO 프로젝트에 구성되어 있으므로 필요시 개발팀에 문의 바랍니다.
+    -->
+    <link rel="stylesheet" href="https://static.wehago.com/lunainfo/treeMap.css" />
+    <link rel="stylesheet" type="text/css" href="https://static.wehago.com/selene/css/selene.css" />
+    <link rel="stylesheet" type="text/css" href="https://static.wehago.com/dist/wehago_common.css" />
+    <link rel="stylesheet" type="text/css" href="https://static.wehago.com/css/wehagoh.css" />
+
+    <script async src="https://static.wehago.com/script/wehago-google-analytics4.js?id=G-44DM6WPMK4"></script>
+  </head>
+  <body class="weh">
+    <div id="wrap" class="weh_wrap">
+      <div id="app"></div>
+      <div id="root"></div>
+
+      <!--
+            [D] 상황에 따라 다를 수 있지만 #root를 벗어난 영역에서 띄워야
+                overflow:hidden; 같은 속성 때문에 가려지지 않을 수 있습니다.
+      -->
+      <div id="dialog"></div>
+      <div id="snackbar"></div>
+      <div id="actionbar"></div>
+      <div id="error_dialog"></div>
+      <!--//기타 공통 모듈, etc -->
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://static.wehago.com/script/jszip.min.js"></script>
+    <script type="text/javascript" src="https://static.wehago.com/baseComponents/wehago.global.live.js"></script>
+
+    <!-- realgrid2 -->
+    <script type="text/javascript" src="https://static.wehago.com/realgrid2/realgrid-lic.js"></script>
+    <!-- <link type="text/css" rel="stylesheet" href="https://static.wehago.com/realgrid2/realgrid-style.css"></link> -->
+
+    <!-- realgrid -->
+    <script type="text/javascript" src="https://static.wehago.com/script/realgridjs-lic.js"></script>
+    <script type="text/javascript" src="https://static.wehago.com/script/realgridjs.1.1.32.min.js"></script>
+    <script type="text/javascript" src="https://static.wehago.com/script/realgridjs-api.1.1.32.js"></script>
+
+    <!-- 전자서명 -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  </body>
+</html>

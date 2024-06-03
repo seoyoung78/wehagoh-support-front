@@ -1,0 +1,22 @@
+.MSC_100100 {
+  .align_left {
+    width: 400px;
+  }
+  .icon {
+    width: 18px;
+  }
+  .table_flex {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .smart_picker_searchDefault span.WSC_LUXSpriteIcon {
+    margin-bottom: -5px;
+  }
+  .border_right {
+    border-right: 1px solid #e5e5e5 !important;
+  }
+  .search {
+    display: flex;
+  }
+}

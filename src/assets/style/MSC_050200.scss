@@ -1,0 +1,155 @@
+.MSC_050200 {
+  .align_left {
+    width: 450px;
+  }
+
+  .test-result {
+    flex: 1;
+    margin-top: 0 !important;
+    .result_box {
+      top: 0 !important;
+    }
+
+    .con_box_margin {
+      margin: 6px 0 6px 0;
+    }
+  }
+}
+
+.content_fix_area_csa3040 {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.content_flex_area_csa3040 {
+  overflow: auto;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+
+  .wrap_container {
+    .left_container {
+      width: 590px;
+    }
+  }
+}
+
+.H40 {
+  height: 40px;
+}
+
+.thS {
+  background-color: #fafafa;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 700;
+}
+.th_allergie {
+  background-color: #fafafa;
+  font-weight: 700;
+}
+.tableS {
+  padding: 6px 6px 7px;
+}
+
+.NRScontainer {
+  display: grid;
+  margin-top: 4px;
+  width: 100%;
+  gap: 5px;
+  grid-template-columns: 20% 28% 51%;
+  grid-template-areas: "dshistory sleepjudge takemedi";
+}
+.ds_history_tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+.tr_head {
+  border-top: 2px solid black;
+}
+
+.ds_history {
+  grid-area: dshistory;
+}
+.sleepjudge {
+  grid-area: sleepjudge;
+}
+.takemedi {
+  grid-area: takemedi;
+}
+
+@media screen and (min-width: 1920px) {
+  .sheet_box {
+    height: 515px;
+    overflow: auto;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .sheet_box {
+    height: 860px;
+    overflow: auto;
+    tr {
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+}
+
+.td_padding {
+  padding: 6px 6px 7px;
+}
+
+.sleepjudge_td {
+  display: flex;
+  align-items: center;
+}
+
+.sleepjudge_padding {
+  padding-left: 6px;
+}
+
+.takemedi_td {
+  display: flex;
+  align-items: center;
+}
+
+.intestine_form_th {
+  width: 10%;
+  background-color: #fafafa;
+  font-weight: 700;
+  height: 40px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.intestine_form_td {
+  display: flex;
+  align-items: center;
+}
+
+.surgery_time {
+  width: 400%;
+}
+
+.intestine_form_td_padding {
+  padding: 6px 6px 7px;
+}
+
+.tr_bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.stomach_form_th {
+  width: 32%;
+}
+
+.th_narrow {
+  width: 120px;
+}
